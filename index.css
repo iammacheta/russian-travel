@@ -1,0 +1,104 @@
+@font-face {
+    font-family: "Inter";
+    font-weight: 400;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Inter"),
+        /* Если не получилось, загрузит woff2 */
+        url("./vendor/Inter/Inter-Regular.woff2") format("woff2"),
+        /* Если браузер не поддерживает woff2, загрузит woff */
+        url("./vendor/Inter/Inter-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-weight: 900;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Inter"),
+        /* Если не получилось, загрузит woff2 */
+        url("./vendor/Inter/Inter-Black.woff2") format("woff2"),
+        /* Если браузер не поддерживает woff2, загрузит woff */
+        url("./vendor/Inter/Inter-Black.woff") format("woff");
+}
+
+.root {
+    background-color: #292b2e;
+}
+
+.header__logo {
+    width: 142px;
+    height: 42px;
+    position: absolute;
+    left: 16px;
+    top: 16px;
+}
+
+.header__lang-links {
+    position: absolute;
+    right: 16px;
+    top: 30px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header__lang-item {
+    display: inline;
+    padding: 0 0 0 18px;
+}
+
+.header__lang-link {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+
+}
+
+.header__lang-link:active {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    .header__logo {
+        width: 176px;
+        height: 52px;
+        left: 24px;
+        top: 28px;
+    }
+
+    .header__lang-links {
+        right: 24px;
+        top: 46px;
+    }
+
+    .header__lang-link {
+        font-size: 24px;
+        line-height: 28px;
+    
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header__logo {
+        left: 48px;
+    }
+
+    .header__lang-links {
+        right: 48px;
+    }
+}
