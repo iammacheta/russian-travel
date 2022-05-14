@@ -33,9 +33,11 @@
 
 .root {
     background-color: #292b2e;
-    font-family: 'Inter';
+    font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .header__logo {
@@ -140,6 +142,191 @@
     font-weight: 400;
 }
 
+.photo-grid {
+    display: grid;
+    padding: 0 16px;
+    margin-bottom: 64px;
+    row-gap: 12px;
+}
+
+.photo-grid__item {
+    width: 100%;
+}
+
+
+
+.places {
+    margin-bottom: 66px;
+}
+
+.places__place {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+        "title"
+        "website"
+        "image"
+        "paragraph";
+    row-gap: 32px;
+    margin-bottom: 50px;
+}
+
+.places__title {
+    grid-area: title;
+    font-weight: 900;
+    margin: 0 16px;
+    font-size: 32px;
+    line-height: 1.09;
+}
+
+.places__image {
+    grid-area: image;
+    width: 100%;
+}
+
+.places__website {
+    grid-area: website;
+    margin: 0 16px;
+}
+
+.places__url-heading {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 2px;
+    color: #aaa;
+    margin: 0 0 12px;
+}
+
+.places__link {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.22;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+}
+
+.places__link:hover {
+    /* here could be used animation for smooth transitions  */
+    opacity: 0.8;
+}
+
+.places__text {
+    grid-area: paragraph;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 0 16px;
+}
+
+.places__paragraph {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.63;
+    margin: 0;
+}
+
+/* Медиавыражения для блока places */
+@media screen and (min-width: 768px) {
+    .places {
+        margin: 0 24px 90px;
+    }
+
+    .places__place {
+        grid-template-columns: 340px 1fr;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+            "title website"
+            "image paragraph";
+        gap: 48px 28px;
+        margin-bottom: 73px;
+    }
+
+    .places__title {
+        font-size: 42px;
+        line-height: 1.1;
+        margin: 0;
+        align-self: end;
+    }
+    .places__website {
+        align-self: end;
+        margin: 0;
+    }
+
+    .places__text {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .places {
+        margin: 0 48px 92px;
+    }
+
+    .places__place {
+        grid-template-columns: 440px 1fr;
+        column-gap: 32px;
+        margin-bottom: 80px;
+    }
+
+    .places__title {
+        font-size: 72px;
+        line-height: 1.06;
+    }
+
+    .places__paragraph {
+        font-size: 18px;
+        line-height: 1.63;
+    }
+
+    .places__paragraph:first-of-type {
+        margin-bottom: 27px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .places {
+        padding: 0 148px;
+    }
+
+    .places__place {
+        grid-template-columns: 460px 1fr;
+        column-gap: 40px;
+        margin-bottom: 92px;
+    }
+}
+
+
+
+
+
+/* Медиавыражения для блока photo-grid */
+@media screen and (min-width: 768px) {
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 24px;
+        margin-bottom: 88px;
+        gap: 16px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .photo-grid {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 48px;
+        margin-bottom: 92px;
+        gap: 14px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .photo-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+    }
+}
+
+
 
 /* Медиавыражения для блока intro */
 @media screen and (min-width: 768px) {
@@ -180,19 +367,6 @@
         padding: 0 148px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Медиавыражения для блока lead */
@@ -248,15 +422,6 @@
         padding-left: 148px;
     }
 }
-
-
-
-
-
-
-
-
-
 
 /* Медиавыражения для блока header */
 @media screen and (min-width: 768px) {
