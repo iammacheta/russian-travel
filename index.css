@@ -308,30 +308,31 @@
 }
 
 /* Медиавыражения для блока footer */
-.footer {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 0 24px;
-    margin: 0 48px;
-}
+@media screen and (min-width: 768px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 0 24px;
+        margin: 0 48px;
+    }
 
-.footer__links {
-    flex-direction: row;
-    gap: 18px;
-    margin: 0;
-    padding: 0;
-}
+    .footer__links {
+        flex-direction: row;
+        gap: 18px;
+        margin: 0;
+        padding: 0;
+    }
 
-.footer__link {
-    font-size: 16px;
-    line-height: 1.12;
-}
+    .footer__link {
+        font-size: 16px;
+        line-height: 1.12;
+    }
 
-.footer__copyright {
-    line-height: 1.14;
-    margin: 0;
+    .footer__copyright {
+        line-height: 1.14;
+        margin: 0;
+    }
 }
-
 
 
 /* Медиавыражения для блока places */
