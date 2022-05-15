@@ -10,4 +10,4 @@
 * организация файловой структуры по БЭМ
 
 ## Проект на GitHub Pages
-
+https://iammacheta.github.io/russian-travel/index.html
