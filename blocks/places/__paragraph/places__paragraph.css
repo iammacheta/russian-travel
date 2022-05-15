@@ -1,0 +1,17 @@
+.places__paragraph {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.63;
+    margin: 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .places__paragraph {
+        font-size: 18px;
+        line-height: 1.63;
+    }
+
+    .places__paragraph:first-of-type {
+        margin-bottom: 27px;
+    }
+}

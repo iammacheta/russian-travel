@@ -1,0 +1,21 @@
+.header__lang-links {
+    position: absolute;
+    right: 16px;
+    top: 30px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .header__lang-links {
+        right: 24px;
+        top: 46px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header__lang-links {
+        right: 48px;
+    }
+}

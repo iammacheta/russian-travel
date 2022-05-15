@@ -1,0 +1,39 @@
+.places__place {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+        "title"
+        "website"
+        "image"
+        "paragraph";
+    row-gap: 32px;
+    margin-bottom: 50px;
+}
+
+@media screen and (min-width: 768px) {
+    .places__place {
+        grid-template-columns: 340px 1fr;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+            "title website"
+            "image paragraph";
+        gap: 48px 28px;
+        margin-bottom: 73px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .places__place {
+        grid-template-columns: 440px 1fr;
+        column-gap: 32px;
+        margin-bottom: 80px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .places__place {
+        grid-template-columns: 460px 1fr;
+        column-gap: 40px;
+        margin-bottom: 83px;
+    }
+}
